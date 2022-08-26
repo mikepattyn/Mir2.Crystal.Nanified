@@ -1,0 +1,73 @@
+﻿namespace Shared.Enums;
+
+public enum BuffType : byte
+{
+    None = 0,
+
+    //Magics
+    TemporalFlux,
+    Hiding,
+    Haste,
+    SwiftFeet,
+    Fury,
+    SoulShield,
+    BlessedArmour,
+    LightBody,
+    UltimateEnhancer,
+    ProtectionField,
+    Rage,
+    Curse,
+    MoonLight,
+    DarkBody,
+    Concentration,
+    VampireShot,
+    PoisonShot,
+    CounterAttack,
+    MentalState,
+    EnergyShield,
+    MagicBooster,
+    PetEnhancer,
+    ImmortalSkin,
+    MagicShield,
+    ElementalBarrier,
+    HolyTrinity,
+
+    //Monster
+    HornedArcherBuff = 50,
+    ColdArcherBuff,
+    GeneralMeowMeowShield,
+    RhinoPriestDebuff,
+    PowerBeadBuff,
+    HornedWarriorShield,
+    HornedCommanderShield,
+    Blindness,
+
+    //Special
+    GameMaster = 100,
+    General,
+    Exp,
+    Drop,
+    Gold,
+    BagWeight,
+    Transform,
+    Lover,
+    Mentee,
+    Mentor,
+    Guild,
+    Prison,
+    Rested,
+    Skill,
+    ClearRing,
+
+    //Stats
+    Impact = 200,
+    Magic,
+    Taoist,
+    Storm,
+    HealthAid,
+    ManaAid,
+    Defence,
+    MagicDefence,
+    WonderDrug,
+    Knapsack,
+}

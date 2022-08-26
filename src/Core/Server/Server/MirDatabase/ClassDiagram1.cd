@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Server.MirDatabase.AccountInfo">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4ABEAKAAAAAAAAUFAhIAAIUAEUBAAABDAQEAAgAAAiE=</HashCode>
+      <FileName>MirDatabase\AccountInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.AuctionInfo" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAiIQAACIAAAAAgABAEAABAAAQBAAAAAAAAAgQ=</HashCode>
+      <FileName>MirDatabase\AuctionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.BuffInfo" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAIAQAAAAUCAAA=</HashCode>
+      <FileName>MirDatabase\BuffInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.Buff" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBAgAIAGAAAgBABAQAAAAAAAAAJAABEAAQAgAEQCAAA=</HashCode>
+      <FileName>MirDatabase\BuffInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.CharacterInfo" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>yWIFlooAjQgAAQ6nAHIAXA4AVlRCCTYBMBWAYwCBQSg=</HashCode>
+      <FileName>MirDatabase\CharacterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.PetInfo" Collapsed="true">
+    <Position X="13.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAIAAQAAAAAABBAAAAAAAQAI=</HashCode>
+      <FileName>MirDatabase\CharacterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.MountInfo" Collapsed="true">
+    <Position X="8.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAIABAAAEAAAAAIAAAUAAAAAQAAIAAAAAAAQAAAAA=</HashCode>
+      <FileName>MirDatabase\CharacterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.FriendInfo" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAACBAAAAIAABAAAACAAEAAEAAAAA=</HashCode>
+      <FileName>MirDatabase\CharacterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestGuildInfo" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAICAAAgBAAACAQAQBAAAAACQAAAAAAAQAEQAAAA=</HashCode>
+      <FileName>MirDatabase\ConquestGuildInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestGuildSiegeInfo" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACIAAAAAACAAAAAEAAAAAAChAAAAIAAEAAEAAAAA=</HashCode>
+      <FileName>MirDatabase\ConquestGuildInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestGuildFlagInfo" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAEAAACAAAAAABAIAAEAAFAACAA=</HashCode>
+      <FileName>MirDatabase\ConquestGuildInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestGuildWallInfo" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACIAAAAAACAAAAAEAAAAAACBAAAQIAAEAAEAAAAA=</HashCode>
+      <FileName>MirDatabase\ConquestGuildInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestGuildGateInfo" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACIAAAAAACAAAAAEAAAAAAChAAAAIAAEAAEAAAAA=</HashCode>
+      <FileName>MirDatabase\ConquestGuildInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestGuildArcherInfo" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAIAAAAAACAAAAAEAAAAAAABAAAQIAAEAAEAAAAA=</HashCode>
+      <FileName>MirDatabase\ConquestGuildInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestInfo" Collapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAIIICCEAgCIEBAIBAKQCIAiAaABIAYEAAgQEAAA=</HashCode>
+      <FileName>MirDatabase\ConquestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestSiegeInfo" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAQAAAAAEAAIAAAQAAAAAAAAAAAEAAAIAAAA=</HashCode>
+      <FileName>MirDatabase\ConquestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestWallInfo" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAQAAAAAEAAIAAAQAAAAAAAAAAAEAAAIAAAA=</HashCode>
+      <FileName>MirDatabase\ConquestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestGateInfo" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAQAAAAAEAAIAAAQAAAAAAAAAAAEAAAIAAAA=</HashCode>
+      <FileName>MirDatabase\ConquestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestArcherInfo" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAQAAAAAEAAIAAAQAAAAAAAAAAAEAAAIAAAA=</HashCode>
+      <FileName>MirDatabase\ConquestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.ConquestFlagInfo" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAEAAIAAAQAAAAAAAAAAAEAAABAAAA=</HashCode>
+      <FileName>MirDatabase\ConquestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.DragonInfo" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAEMAAAAgAAIAABBMAAAAAAABAAAABEAAAAAABQAA=</HashCode>
+      <FileName>MirDatabase\DragonInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.GuildInfo" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAYAACIAIAQIBAAAAIASAAgDAQAAFAAAAAAAAQAE=</HashCode>
+      <FileName>MirDatabase\GuildInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.HeroInfo" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABgIAAAAAAAAAAEgAEAAAAACAAAAAAICAAAAEAAAA=</HashCode>
+      <FileName>MirDatabase\HeroInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.IntelligentCreatureInfo" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAgAAAAABAABAAAAEAAoAAgAABAAAAAAAAQAAEAAAA=</HashCode>
+      <FileName>MirDatabase\IntelligentCreatureInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.UserIntelligentCreature" Collapsed="true">
+    <Position X="11.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAAAAAAAAAAEQgAAAADBAAsAAAAAAAEIAABA=</HashCode>
+      <FileName>MirDatabase\IntelligentCreatureInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.MagicInfo" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAIAICAAABQCAAEEAAAABQAAQBAApABAAAAAAEBBAA=</HashCode>
+      <FileName>MirDatabase\MagicInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.UserMagic" Collapsed="true">
+    <Position X="13.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAIAAAAgAgAQAABAAAAAAABBAQcABAAAAAGAAQAI=</HashCode>
+      <FileName>MirDatabase\MagicInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.MailInfo" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAABAIAgCAICCAAAAEAAQAEAEABgAABAAAABIAAIAAE=</HashCode>
+      <FileName>MirDatabase\MailInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.MapInfo" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIEEJlEQqAJCFAEJFAAYgAAABBEAKQwACEACAZKEQg=</HashCode>
+      <FileName>MirDatabase\MapInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.MineSet" Collapsed="true">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAEIAAAAgwAAAAAAAAAAQAAAgAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>MirDatabase\MineInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.MineSpot" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAA=</HashCode>
+      <FileName>MirDatabase\MineInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.MineDrop" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAwAAAAAAAAAAAABAEAAAEBAAAAAAAAAAAAgA=</HashCode>
+      <FileName>MirDatabase\MineInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.MineZone" Collapsed="true">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAIAAAAAAgAAEAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MirDatabase\MineInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.MonsterInfo" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAABIAACCoAABAEwFIAAgQAAABAAJIBAAEgAAAAQQA=</HashCode>
+      <FileName>MirDatabase\MonsterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.DropRewardInfo" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>MirDatabase\MonsterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.GroupDropInfo" Collapsed="true">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MirDatabase\MonsterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.DropInfo" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAgQAAAAAABAAAABAAAAAEAEBAAAQAAQAAAAAAQAE=</HashCode>
+      <FileName>MirDatabase\MonsterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.MovementInfo" Collapsed="true">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAkIAAAgAAAAAkAAAAAAAAAAAAAABEAQAAAAEAAAA=</HashCode>
+      <FileName>MirDatabase\MovementInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.NPCInfo" Collapsed="true">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAwBoiAACBAAIAEAEIAAAQAAAQAALRKASEgABBAFAA=</HashCode>
+      <FileName>MirDatabase\NPCInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.QuestInfo" Collapsed="true">
+    <Position X="6.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAlAMAIACBoAABEIFgFAQQR0AhABIJAAQFRCoBIBAA=</HashCode>
+      <FileName>MirDatabase\QuestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.QuestKillTask" Collapsed="true">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAgAAIAAAAAA=</HashCode>
+      <FileName>MirDatabase\QuestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.QuestItemTask" Collapsed="true">
+    <Position X="8.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>MirDatabase\QuestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.QuestFlagTask" Collapsed="true">
+    <Position X="3" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>MirDatabase\QuestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.QuestProgressInfo" Collapsed="true">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCAIAICAAEAEEWYhAAAIAAAABIBAACAAAAECAVAABQQ=</HashCode>
+      <FileName>MirDatabase\QuestProgressInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.QuestKillTaskProgress" Collapsed="true">
+    <Position X="13.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAEAQAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>MirDatabase\QuestProgressInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.QuestItemTaskProgress" Collapsed="true">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAgAAAAAQAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>MirDatabase\QuestProgressInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.QuestFlagTaskProgress" Collapsed="true">
+    <Position X="4.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAEAAAAAAAAAAAAAAAAAABEAAAAA=</HashCode>
+      <FileName>MirDatabase\QuestProgressInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.RecipeInfo" Collapsed="true">
+    <Position X="4.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAgABAEAAAAgBAgACAUAABAAAQAQAAAAABAABE=</HashCode>
+      <FileName>MirDatabase\RecipeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.RespawnInfo" Collapsed="true">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIACAAAAAIAEACIAAIUAAABIAoAAAAAAAABAAAA=</HashCode>
+      <FileName>MirDatabase\RespawnInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.RouteInfo" Collapsed="true">
+    <Position X="8.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAIAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>MirDatabase\RespawnInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.MirDatabase.SafeZoneInfo" Collapsed="true">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAgAAEAAIAAAAAAAAAAAAAAAAAAEAAAAg=</HashCode>
+      <FileName>MirDatabase\SafeZoneInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="16.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

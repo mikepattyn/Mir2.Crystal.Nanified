@@ -1,0 +1,17 @@
+﻿namespace Shared.Packets.Server.Models;
+
+public sealed class MarketSuccess : ServerPacket
+{
+    public override short Index { get { return (short)ServerPacketIds.MarketSuccess; } }
+
+    public string Message = string.Empty;
+
+    public override void ReadPacket(BinaryReader reader)
+    {
+        Message = reader.ReadString();
+    }
+    public override void WritePacket(BinaryWriter writer)
+    {
+        writer.Write(Message);
+    }
+}
