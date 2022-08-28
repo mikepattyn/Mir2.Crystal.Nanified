@@ -25,7 +25,8 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install NPM packages
         run: npm install
-
+        working-directory: src/Server/Server.Admin
+        
       - name: Install the Angular CLI
         run: npm install -g @angular/cli
 
@@ -50,7 +51,6 @@ jobs:
           file: ./src/Server/Server.Admin/Dockerfile
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/mir2-explorer:nani
           push: true
-  
   backend:
     runs-on: ubuntu-latest
     strategy:
