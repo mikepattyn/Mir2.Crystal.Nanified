@@ -22,7 +22,7 @@
       <div class="card">
         <div class="card-header">
           <div class="database-table-header">
-            <a class="database-table-name" *ngFor="let table of tables" href="https://localhost:4200/explorer?tableName={{table.Name}}" [queryParams]="{tableName: table.Name}">{{table.Name}}</a>
+            <a class="database-table-name" *ngFor="let table of tables" [routerLink]="['/', 'explorer']" [queryParams]="{tableName: table.Name}">{{table.Name}}</a>
           </div>
         </div>
         <div id="tableCard" class="card-body" style="overflow-x:scroll;">
