@@ -1,0 +1,20 @@
+.database-table-name {
+  margin-right: 10px;
+  color: white !important;
+
+}
+.database-table-header {
+  overflow-wrap: unset;
+  flex-wrap: wrap;
+  display: flex;
+}
+::-webkit-scrollbar {
+  width: 30px;
+}
+
+.fixed {
+  /* position: fixed;
+  display: flex; */
+  position: absolute;
+  width: -webkit-fill-available;
+}

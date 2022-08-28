@@ -4,3 +4,6 @@
 .vs/ProjectEvaluation
 **/bin
 **/obj
+.vs
+**/bin/*
+**/obj/*
