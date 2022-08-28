@@ -2,22 +2,16 @@ version: "3.7"
 
 services:
   mir2-backend:
-    container_name: mir2-nani-backend
-    build:
-      context: .
-      dockerfile: Dockerfile
+    container_name: mir2-backend
+    image: mikepattyn/mir2-backend:nani
     ports:
       - 5000:5000
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-    volumes:
-      - ${USERPROFILE}\.mir2-nani:/
 
   mir2-admin:
-    build:
-      context: .
-      dockerfile: src/Server/Server.Admin/Dockerfile
-    container_name: mir2-nani-explorer
+    container_name: mir2-explorer
+    image: mikepattyn/mir2-explorer:nani
     ports: 
       - 80:80
     depends_on:
