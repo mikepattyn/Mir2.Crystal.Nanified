@@ -53,6 +53,9 @@ jobs:
   
   backend:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: [net6]
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2

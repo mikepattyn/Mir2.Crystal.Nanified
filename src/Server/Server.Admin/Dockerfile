@@ -2,7 +2,7 @@ FROM givt/base-nginx-image
 
 WORKDIR /app
 
-COPY package.json .
+COPY src/Server/Server.Admin/package.json .
 
 RUN npm install
 
