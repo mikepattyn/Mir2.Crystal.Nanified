@@ -53,6 +53,14 @@ jobs:
           file: ./src/Server/Server.Admin/Dockerfile
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/mir2-explorer:latest
           push: true
+      
+      - name: Notify discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@master
+        with: 
+          args: 'The project mir2-explorer has been deployed.'
+
   backend:
     runs-on: ubuntu-latest
     strategy:
@@ -80,3 +88,10 @@ jobs:
           file: ./Dockerfile
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/mir2-backend:latest
           push: true
+
+      - name: Notify discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@master
+        with: 
+          args: 'The project mir2-backend has been deployed.'
