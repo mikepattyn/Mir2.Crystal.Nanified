@@ -3,7 +3,7 @@ version: "3.7"
 services:
   mir2-backend:
     container_name: mir2-backend
-    image: mikepattyn/mir2-backend:nani
+    image: mikepattyn/mir2-backend:latest
     ports:
       - 5000:5000
     environment:
@@ -11,7 +11,7 @@ services:
 
   mir2-admin:
     container_name: mir2-explorer
-    image: mikepattyn/mir2-explorer:nani
+    image: mikepattyn/mir2-explorer:latest
     ports: 
       - 80:80
     depends_on:

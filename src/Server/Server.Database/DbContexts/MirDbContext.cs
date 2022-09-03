@@ -2,7 +2,7 @@
 using Persistance.Domain;
 using Server.Database.Models;
 
-namespace Persistance.Database;
+namespace Server.Database.DbContexts;
 public class MirDbContext : DbContext
 {
     public MirDbContext(DbContextOptions<MirDbContext> options) : base(options)

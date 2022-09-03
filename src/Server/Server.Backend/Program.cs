@@ -1,9 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Server.Database.Models;
-using System.Collections;
 using System.Text.Json;
+using Server.Database.DbContexts;
 
 Console.WriteLine("Hello, World!");
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +13,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer()
                 .AddOpenApiDocument();
-builder.Services.AddAWSLambdaHosting(LambdaEventSource.HttpApi);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("_AllowSpecificOrigins", 
@@ -24,51 +24,61 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseOpenApi();
-app.UseSwaggerUI();
+app.UseOpenApi()
+   .UseSwaggerUI();
 
 app.MapGet("/", () => 
     JsonSerializer.Serialize(typeof(DomainAccount).Assembly
         .ExportedTypes.Where(x => x.Name.StartsWith("Domain"))
-        .Select(x => new EntityViewModel(x))
+        .Select(x => new DatabaseEntity(x))
     .ToList()));
 
-app.UseHttpsRedirection();
-app.UseAuthorization();
-app.UseRouting().UseCors("_AllowSpecificOrigins");
+app.UseHttpsRedirection()
+   .UseAuthorization()
+   .UseRouting()
+   .UseCors("_AllowSpecificOrigins");
+
 app.MapControllers();
 
 app.Run();
 
-class EntityViewModel
+public record GetDatabaseEntitiesQuery : IRequest<IEnumerable<DatabaseEntity>>;
+public record GetDatabaseEntitiesQueryHandler : IRequestHandler<GetDatabaseEntitiesQuery, IEnumerable<DatabaseEntity>>
 {
-    Type entityType;
-    public EntityViewModel(Type type)
+    public Task<IEnumerable<DatabaseEntity>> Handle(GetDatabaseEntitiesQuery request, CancellationToken cancellationToken)
     {
-        entityType = type;
+        return Task.FromResult(typeof(DomainAccount).Assembly
+            .ExportedTypes.Where(x => x.Name.StartsWith("Domain"))
+            .Select(x => new DatabaseEntity(x)));
     }
-    public string Name => entityType.Name.Replace("Domain", "");
-    public string[] Headers
+}
+
+
+public class CreateDatabaseRecordCommand : IRequest
+{
+    public Entity Entity { get; set; }
+}
+
+public abstract class DatabaseHandler
+{
+    internal readonly MirDbContext Context;
+
+    protected DatabaseHandler(MirDbContext context)
     {
-        get
-        {
-            var retVal = entityType
-                .GetProperties()
-                .Select(x =>
-                {
-                    if (x.PropertyType.Name.Contains(nameof(ICollection)))
-                        return $"{x.Name} ({x.PropertyType.GenericTypeArguments.First().Name.Replace("Domain", "")})";
-                    return $"{x.Name} ({x.PropertyType.Name})";
-                })
-                .ToArray();
-
-            if (entityType.BaseType!.GetFields().Any(x=>x.Name.Contains("Id")))
-            {
-                retVal = retVal.Prepend($"Id ({entityType.BaseType!.GetProperties().First()!.Name})").ToArray();
-            }
-
-            return retVal;
-        }
+        Context = context;
     }
-    public IEnumerable<string> Values { get; set; }
+}
+
+public class CreateDatabaseRecordCommandHandler : DatabaseHandler, IRequestHandler<CreateDatabaseRecordCommand>
+{
+    public CreateDatabaseRecordCommandHandler(MirDbContext context) : base(context)
+    {
+    }
+
+    public async Task<Unit> Handle(CreateDatabaseRecordCommand request, CancellationToken cancellationToken)
+    {
+        await Context.AddAsync(request, cancellationToken);
+        await Context.SaveChangesAsync(cancellationToken);
+        return Unit.Value;
+    }
 }

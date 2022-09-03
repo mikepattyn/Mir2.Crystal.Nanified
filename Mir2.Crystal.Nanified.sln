@@ -23,10 +23,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yaml = docker-compose.yaml
 		Dockerfile = Dockerfile
-		mir2-nani.yml = mir2-nani.yml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Backend", "src\Server\Server.Backend\Server.Backend.csproj", "{236F045E-9BFD-42C9-9B5C-712D9C804982}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "git", "git", "{41994C80-DA1F-4455-8515-D4B74BCD4905}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.gitmodules = .gitmodules
+		.github\workflows\mir2-nani.yml = .github\workflows\mir2-nani.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +87,7 @@ Global
 		{64F148BF-15A9-4B4A-9C3E-B5DA99640B0F} = {7388D250-06E4-4AE9-BFC7-0892E5A1209C}
 		{60010614-5FBB-47EF-8363-D659A8C903DB} = {7875AC0A-C377-4133-A31D-E244AEB197E7}
 		{236F045E-9BFD-42C9-9B5C-712D9C804982} = {7875AC0A-C377-4133-A31D-E244AEB197E7}
+		{41994C80-DA1F-4455-8515-D4B74BCD4905} = {C80CF14F-9402-43E8-ACC6-E4CDBD0C4611}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {92FEF176-BCFA-41A5-A682-BDD203EADC8D}
