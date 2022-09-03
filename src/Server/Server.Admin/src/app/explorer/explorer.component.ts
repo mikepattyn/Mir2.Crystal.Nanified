@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Event } from '@angular/router';
 import { ITableViewModel } from '../database-reflection-resolver';
-declare let $: any
+declare let $: any;
 
 @Component({
   selector: 'app-explorer',

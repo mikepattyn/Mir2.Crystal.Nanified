@@ -8,7 +8,12 @@ import { CommonModule } from '@angular/common';
 const routes: Routes = [
   {
     path: "",
-    component: DashboardComponent
+    component: DashboardComponent,
+    resolve: {
+      preFetchData: DashboardPrefetchResolver
+      
+
+    }
   },
   {
     path: "dashboard",
