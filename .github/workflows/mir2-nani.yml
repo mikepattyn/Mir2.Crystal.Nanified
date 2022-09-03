@@ -2,7 +2,8 @@
 on:
   push:
     branches: [ main ]
-
+  status:
+    branches: [ main ]
 jobs:
   explorer:
     runs-on: ubuntu-latest
@@ -12,10 +13,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Setup Node ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: Cache Node modules
         uses: actions/cache@v1
         with:
@@ -23,6 +26,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Install NPM packages
         run: npm install
         working-directory: src/Server/Server.Admin
@@ -53,7 +57,7 @@ jobs:
           file: ./src/Server/Server.Admin/Dockerfile
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/mir2-explorer:latest
           push: true
-      
+
       - name: Notify discord
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
@@ -95,3 +99,13 @@ jobs:
         uses: Ilshidur/action-discord@master
         with: 
           args: 'The project mir2-backend has been deployed.'
+
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Notify'
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@master
+        with:
+          args: github.event
