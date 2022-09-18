@@ -11,6 +11,8 @@ Console.WriteLine("Hello, World!");
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddSingleton<MirDbContext>(); // <- this line of code starts up the database connection.
+
 builder.Services.AddMediatR(typeof(GetDashboardDataQuery).Assembly); // <- this does not add mediatr itself. 
 builder.Services.AddMemoryCache();
                            /*Interface,Implementation*/
