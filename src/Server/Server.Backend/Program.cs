@@ -11,6 +11,7 @@ Console.WriteLine("Hello, World!");
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddMediatR(typeof(GetDashboardDataQuery).Assembly);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer()
                 .AddOpenApiDocument();
