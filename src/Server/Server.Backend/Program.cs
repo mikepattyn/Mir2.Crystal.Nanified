@@ -12,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddMediatR(typeof(GetDashboardDataQuery).Assembly); // <- this does not add mediatr itself. 
+builder.Services.AddMemoryCache();
                            /*Interface,Implementation*/
 builder.Services.AddScoped<IMediator, Mediator>(); // <- my mistake, the interface type is IMediator the implementation is Mediator
 
