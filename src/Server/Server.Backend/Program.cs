@@ -15,6 +15,8 @@ builder.Services.AddSingleton<MirDbContext>(); // <- this line of code starts up
 
 builder.Services.AddMediatR(typeof(GetDashboardDataQuery).Assembly); // <- this does not add mediatr itself. 
 builder.Services.AddMemoryCache();
+builder.Services.AddSqlite<MirDbContext>(builder.Configuration.GetConnectionString("Mir2Db"));
+
                            /*Interface,Implementation*/
 builder.Services.AddScoped<IMediator, Mediator>(); // <- my mistake, the interface type is IMediator the implementation is Mediator
 
