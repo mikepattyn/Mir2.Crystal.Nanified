@@ -4,7 +4,6 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { ExplorerComponent } from "./explorer/explorer.component";
 import { DatabaseReflectionResolver } from "./database-reflection-resolver";
 import { CommonModule } from '@angular/common';
-import { DashboardPrefetchResolver } from './fetch-dashboard-data-resolver';
 
 const routes: Routes = [
   {
