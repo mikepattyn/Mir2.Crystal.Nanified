@@ -90,6 +90,8 @@ jobs:
           file: ./Dockerfile
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/mir2-backend:latest
           push: true
+		  env:
+		    - ConnectionStrings__Mir2Db: ${{ secrets.ConnectionStrings__Mir2Db }}
 
       - name: Notify discord
         env:

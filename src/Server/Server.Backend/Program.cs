@@ -10,12 +10,9 @@ using Server.Database.DbContexts;
 Console.WriteLine("Hello, World!");
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddSingleton<MirDbContext>(); // <- this line of code starts up the database connection.
-
+builder.Services.AddSqlite<MirDbContext>(builder.Configuration.GetConnectionString("Mir2Db"));
 builder.Services.AddMediatR(typeof(GetDashboardDataQuery).Assembly); // <- this does not add mediatr itself. 
 builder.Services.AddMemoryCache();
-builder.Services.AddSqlite<MirDbContext>(builder.Configuration.GetConnectionString("Mir2Db"));
 
                            /*Interface,Implementation*/
 builder.Services.AddScoped<IMediator, Mediator>(); // <- my mistake, the interface type is IMediator the implementation is Mediator
