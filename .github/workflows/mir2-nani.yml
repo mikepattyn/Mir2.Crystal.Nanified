@@ -59,8 +59,9 @@ jobs:
         uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          embed-title: ${{ github.repository }}
-          embed-description: "Deployed Mir2.Explorer"
+          content: ${{ github.repository }}
+          embed-title: "Deployed Mir2.Explorer"
+          embed-description: ${{ github.owner }}
           embed-footer-text: ${{ job }}
 
   backend:
@@ -97,6 +98,7 @@ jobs:
         uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          embed-title: ${{ github.repository }}
-          embed-description: "Deployed Mir2.Backend"
+          content: ${{ github.repository }}
+          embed-title: "Deployed Mir2.Backend"
+          embed-description: ${{ github.owner }}
           embed-footer-text: ${{ job }}
