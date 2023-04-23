@@ -3,6 +3,6 @@
     public class Entity { }
     public abstract class Entity<TId> : Entity
     {
-        TId Id { get; set; }
+        public TId Id { get; set; }
     }
 }

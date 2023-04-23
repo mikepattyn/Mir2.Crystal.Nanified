@@ -1,6 +1,8 @@
-﻿namespace Persistance.Domain;
+﻿using Server.Database.Models;
 
-public class DomainItem
+namespace Persistance.Domain;
+
+public class DomainItem : Entity<int>
 {
 
 }
