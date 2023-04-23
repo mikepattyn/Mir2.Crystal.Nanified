@@ -11,7 +11,7 @@ public class GetDashboardDataQueryHandler : DatabaseHandler, IRequestHandler<Get
     public async Task<DashboardData> Handle(GetDashboardDataQuery request, CancellationToken cancellationToken)
     {
         var data = new DashboardData();
-        var players = await Context.Accounts.CountAsync(x => x.LastActivity > DateTime.UtcNow.AddMinutes(10), cancellationToken);
+        var players = 1;
         data.OnlinePlayers = players;
         data.ServerTimeOnline = TimeSpan.FromMinutes(10);
         data.ActiveDungeons = 22;
