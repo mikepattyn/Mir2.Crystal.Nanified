@@ -56,12 +56,6 @@ jobs:
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/mir2-explorer:latest
           push: true
 
-      - name: Run Discord Webhook
-        uses: bythope/discord-webhook-messages@v1.1.0
-        with:
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-          handler: 'push'
-
   backend:
     runs-on: ubuntu-latest
     strategy:
@@ -91,9 +85,3 @@ jobs:
           push: true
         env:
           ConnectionStrings__Mir2Db: Data Source=Development.Mir2.db
-
-      - name: Run Discord Webhook
-        uses: bythope/discord-webhook-messages@v1.1.0
-        with:
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-          handler: 'push'
