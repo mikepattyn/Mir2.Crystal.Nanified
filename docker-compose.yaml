@@ -9,7 +9,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
 
-  mir2-admin:
+  mir2-explorer:
     container_name: mir2-explorer
     image: mikepattyn/mir2-explorer:latest
     ports: 
