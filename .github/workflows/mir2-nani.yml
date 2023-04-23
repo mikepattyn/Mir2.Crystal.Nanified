@@ -62,7 +62,7 @@ jobs:
           content: ${{ github.repository }}
           embed-title: "Deployed Mir2.Explorer"
           embed-description: ${{ github.owner }}
-          embed-footer-text: ${{ job }}
+          embed-footer-text: ${{ github.action }}
 
   backend:
     runs-on: ubuntu-latest
