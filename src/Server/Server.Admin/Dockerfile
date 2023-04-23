@@ -18,7 +18,8 @@ RUN npm run build --prod
 
 FROM nginx:mainline-alpine-perl
 
-RUN ls .
+# Set the working directory to /app
+WORKDIR /app
 
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
