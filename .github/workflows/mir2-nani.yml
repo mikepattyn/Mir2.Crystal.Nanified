@@ -92,10 +92,16 @@ jobs:
           push: true
         env:
           ConnectionStrings__Mir2Db: Data Source=Development.Mir2.db
+      - name: Get Docker pull URL
+        run: |
+          IMAGE_NAME=my-registry/my-image
+          DOCKER_PULL_URL=$(docker inspect --format='{{range .RepoDigests}}{{.}}{{end}}' $IMAGE_NAME)
+          echo "::set-output name=docker_pull_url::$DOCKER_PULL_URL"
+        id: get_docker_pull_url
 
       - name: Notify discord
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@master
         with: 
-          args: 'The project mir2-backend has been deployed.'
+          args: 'The project mir2-backend has been deployed. ${{ steps.build-and-deploy.outputs.docker_pull_url }}'
