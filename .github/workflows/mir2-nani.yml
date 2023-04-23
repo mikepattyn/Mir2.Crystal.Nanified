@@ -12,6 +12,31 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Setup Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache Node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install NPM packages
+        run: npm install
+        working-directory: src/Server/Server.Admin
+        
+      - name: Install the Angular CLI
+        run: npm install -g @angular/cli
+        working-directory: src/Server/Server.Admin
+
+      - name: Build the Angular webapp
+        run: ng build
+        working-directory: src/Server/Server.Admin
+
       - name: Login to Docker Hub
         uses: docker/login-action@v1
         with:
