@@ -55,15 +55,15 @@ jobs:
           file: ./src/Server/Server.Admin/Dockerfile
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/mir2-explorer:latest
           push: true
+
       - name: Discord Webhook Action
         uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          content: ${{ github.repository }}
+          content: Job completed
           embed-title: ${{ github.ref_name }}
-          embed-description: ${{ github.owner }} + "commited Mir2.Explorer to main"
+          embed-description: ${{ github.owner }} + commited Mir2.Explorer
           embed-footer-text: ${{ github.repository_owner }}
-          embed-author-name: "Github Workflow"
           embed-timestamp: ${{ github.event.head_commit.timestamp }}
 
   backend:
@@ -100,9 +100,8 @@ jobs:
         uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          content: ${{ github.repository }}
+          content: Job completed
           embed-title: ${{ github.ref_name }}
-          embed-description: ${{ github.owner }} + "commited Mir2.Backend to main"
+          embed-description: ${{ github.owner }} + commited Mir2.Backend
           embed-footer-text: ${{ github.repository_owner }}
-          embed-author-name: "Github Workflow"
           embed-timestamp: ${{ github.event.head_commit.timestamp }}
