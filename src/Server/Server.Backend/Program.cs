@@ -2,8 +2,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using Server.Database.Models;
-using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 using Server.Database.DbContexts;
 
@@ -34,14 +32,8 @@ var app = builder.Build();
 app.UseOpenApi()
    .UseSwaggerUI();
 
-app.MapGet("/", () => 
-    JsonSerializer.Serialize(typeof(DomainAccount).Assembly
-        .ExportedTypes.Where(x => x.Name.StartsWith("Domain"))
-        .Select(x => new DatabaseEntity(x))
-    .ToList()));
+app.UseCrystalM2Nanified();
 
-app.MapGet("/dashboard", async (IMediator Mediator) => 
-    await Mediator.Send(new GetDashboardDataQuery()));
 
 app.UseHttpsRedirection()
    .UseAuthorization()
