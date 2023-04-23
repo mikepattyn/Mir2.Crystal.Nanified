@@ -59,8 +59,9 @@ jobs:
         uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          content: "Test"
           embed-title: ${{ github.repository }}
+          embed-description: "Deployed Mir2.Explorer"
+          embed-footer-text: ${{ job }}
 
   backend:
     runs-on: ubuntu-latest
@@ -96,5 +97,6 @@ jobs:
         uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          content: "Test"
           embed-title: ${{ github.repository }}
+          embed-description: "Deployed Mir2.Backend"
+          embed-footer-text: ${{ job }}
