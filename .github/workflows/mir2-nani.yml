@@ -60,10 +60,11 @@ jobs:
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
           content: ${{ github.repository }}
-          embed-title: "Deployed Mir2.Explorer"
-          embed-description: ${{ github.owner }}
+          embed-title: ${{ github.ref_name }}
+          embed-description: ${{ github.owner }} + "commited Mir2.Explorer to main"
           embed-footer-text: ${{ github.repository_owner }}
-          embed-author-name: ${{ github.actor }}
+          embed-author-name: "Github Workflow"
+          embed-timestamp: ${{ github.event.head_commit.timestamp }}
 
   backend:
     runs-on: ubuntu-latest
@@ -100,7 +101,8 @@ jobs:
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
           content: ${{ github.repository }}
-          embed-title: "Deployed Mir2.Backend"
-          embed-description: ${{ github.owner }}
+          embed-title: ${{ github.ref_name }}
+          embed-description: ${{ github.owner }} + "commited Mir2.Backend to main"
           embed-footer-text: ${{ github.repository_owner }}
-          embed-author-name: ${{ github.actor }}
+          embed-author-name: "Github Workflow"
+          embed-timestamp: ${{ github.event.head_commit.timestamp }}
