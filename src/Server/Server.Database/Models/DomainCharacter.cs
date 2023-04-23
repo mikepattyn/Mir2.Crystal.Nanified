@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Drawing;
 using Server.Database.Models;
 using Shared.Enums;
 using Shared.Models.Items;
@@ -41,9 +42,12 @@ public class DomainCharacter : Entity<long>
 
     //Location
     public int CurrentMapIndex { get; set; }
+    [NotMapped]
     public Point CurrentLocation { get; set; }
     public MirDirection Direction { get; set; }
     public int BindMapIndex { get; set; }
+
+    [NotMapped]
     public Point BindLocation { get; set; }
 
     public int HP { get; set; }
@@ -85,7 +89,7 @@ public class DomainCharacter : Entity<long>
     public ICollection<DomainIntelligentCreature> IntelligentCreatures { get; set; }
     public ICollection<DomainQuestProgress> CurrentQuests { get; set; }
     public ICollection<DomainQuestProgress> CompletedQuests { get; set; }
-
+    [NotMapped]
     public bool[] Flags { get; set; }
 
 

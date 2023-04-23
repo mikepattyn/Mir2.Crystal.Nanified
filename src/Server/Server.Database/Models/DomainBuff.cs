@@ -1,4 +1,5 @@
-﻿using Server.Database.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Server.Database.Models;
 using Shared.Enums;
 
 namespace Persistance.Domain;

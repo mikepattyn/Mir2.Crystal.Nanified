@@ -60,7 +60,7 @@ jobs:
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
           content: "Test"
-          embed-title: "Explorer deployed"
+          embed-title: ${{ github.repository }}
 
   backend:
     runs-on: ubuntu-latest
@@ -97,4 +97,4 @@ jobs:
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
           content: "Test"
-          embed-title: "Backend deployed"
+          embed-title: ${{ github.repository }}
