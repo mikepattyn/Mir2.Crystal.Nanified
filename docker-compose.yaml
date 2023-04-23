@@ -13,6 +13,6 @@ services:
     container_name: mir2-explorer
     image: mikepattyn/mir2-explorer:latest
     ports: 
-      - 4200:80
+      - 80:80
     depends_on:
       - mir2-backend

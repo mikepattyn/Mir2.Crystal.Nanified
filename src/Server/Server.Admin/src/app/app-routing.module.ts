@@ -12,13 +12,7 @@ const routes: Routes = [
     component: DashboardComponent,
     resolve: {
       preFetchData: DashboardPrefetchResolver
-      
-
     }
-  },
-  {
-    path: "dashboard",
-    component: DashboardComponent
   },
   {
     path: "explorer",
