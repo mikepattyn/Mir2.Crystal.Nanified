@@ -18,9 +18,9 @@ RUN npm run build --prod
 
 FROM nginx:mainline-alpine-perl
 
-COPY docker/nginx.conf /etc/nginx/nginx.conf
+COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
-COPY docker/default.conf /etc/nginx/conf.d/default.conf
+COPY ./docker/default.conf /etc/nginx/conf.d/default.conf
 
 COPY --from=builder /app/dist/server.admin /usr/share/nginx/html
 
