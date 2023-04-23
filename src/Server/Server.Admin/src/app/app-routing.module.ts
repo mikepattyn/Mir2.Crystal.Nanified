@@ -25,13 +25,7 @@ const routes: Routes = [
     component: ExplorerComponent,
     resolve: {
       preFetchData: DatabaseReflectionResolver
-    },
-    children: [
-      {
-        path: '',
-        component: ExplorerComponent
-      }
-    ]
+    }
   }
 ];
 

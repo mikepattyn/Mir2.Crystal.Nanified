@@ -14,7 +14,7 @@ export class DatabaseReflectionResolver implements Resolve<any> {
   }
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     console.log(route);
-      return this.httpClient.get<ITableViewModel[]>("https://localhost:5001")
+      return this.httpClient.get<ITableViewModel[]>("https://localhost:5000")
   }
 }
 
