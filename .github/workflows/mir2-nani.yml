@@ -101,4 +101,4 @@ jobs:
           content: ${{ github.repository }}
           embed-title: "Deployed Mir2.Backend"
           embed-description: ${{ github.owner }}
-          embed-footer-text: ${{ job }}
+          embed-footer-text: ${{ github.action }}
