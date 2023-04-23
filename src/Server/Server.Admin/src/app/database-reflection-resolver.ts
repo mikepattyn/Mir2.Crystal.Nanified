@@ -13,8 +13,7 @@ export class DatabaseReflectionResolver implements Resolve<any> {
     return error;
   }
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    console.log(route);
-      return this.httpClient.get<ITableViewModel[]>("https://localhost:5000")
+    return this.httpClient.get<ITableViewModel[]>("http://localhost:5000")
   }
 }
 

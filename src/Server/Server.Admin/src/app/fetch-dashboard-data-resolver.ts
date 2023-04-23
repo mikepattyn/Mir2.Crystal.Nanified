@@ -13,7 +13,6 @@ export class DashboardPrefetchResolver implements Resolve<any> {
     return error;
   }
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    console.log(route);
     return this.httpClient.get<DashboardData>("http://localhost:5000/dashboard");
   }
 }

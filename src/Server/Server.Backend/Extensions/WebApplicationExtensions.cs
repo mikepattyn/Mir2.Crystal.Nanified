@@ -8,10 +8,10 @@ public static class WebApplicationExtensions
     public static void UseCrystalM2Nanified(this WebApplication app)
     {
         app.MapGet("/", () =>
-            JsonSerializer.Serialize(typeof(DomainAccount).Assembly
+           typeof(DomainAccount).Assembly
                 .ExportedTypes.Where(x => x.Name.StartsWith("Domain"))
                 .Select(x => new DatabaseEntity(x))
-                .ToList()));
+                .ToList());
 
         app.MapGet("/dashboard", async (IMediator Mediator) =>
             await Mediator.Send(new GetDashboardDataQuery()));
