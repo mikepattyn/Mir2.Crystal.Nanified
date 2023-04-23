@@ -14,6 +14,6 @@ export class DashboardPrefetchResolver implements Resolve<any> {
   }
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     console.log(route);
-    return this.httpClient.get<DashboardData>("https://localhost:5001/dashboard");
+    return this.httpClient.get<DashboardData>("http://localhost:5000/dashboard");
   }
 }
