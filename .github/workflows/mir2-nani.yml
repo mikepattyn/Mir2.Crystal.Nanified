@@ -62,7 +62,8 @@ jobs:
           content: ${{ github.repository }}
           embed-title: "Deployed Mir2.Explorer"
           embed-description: ${{ github.owner }}
-          embed-footer-text: ${{ github.action }}
+          embed-footer-text: ${{ github.repository_owner }}
+          embed-author-name: ${{ github.actor }}
 
   backend:
     runs-on: ubuntu-latest
@@ -101,4 +102,5 @@ jobs:
           content: ${{ github.repository }}
           embed-title: "Deployed Mir2.Backend"
           embed-description: ${{ github.owner }}
-          embed-footer-text: ${{ github.action }}
+          embed-footer-text: ${{ github.repository_owner }}
+          embed-author-name: ${{ github.actor }}
