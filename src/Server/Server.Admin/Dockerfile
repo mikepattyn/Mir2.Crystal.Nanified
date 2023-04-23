@@ -21,6 +21,8 @@ FROM nginx:mainline-alpine-perl
 # Set the working directory to /app
 WORKDIR /app
 
+RUN ls
+
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
 COPY ./docker/default.conf /etc/nginx/conf.d/default.conf
